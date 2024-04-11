@@ -1,4 +1,4 @@
-name: CI
+name: DumprX on GitHub
 
 on:
   workflow_dispatch:
