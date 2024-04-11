@@ -11,7 +11,7 @@ env:
   ROM_LINK: ${{ github.event.inputs.ROM_LINK }}
   GIT_ORG: Van-Firmware-Dumps
   TG_TOKEN: ${{ secrets.TG_TOKEN }}
-  CHAT_ID: @VanFirmwareDumps
+  CHAT_ID: "@VanFirmwareDumps"
   GIT_TOKEN: ${{ secrets.GIT_TOKEN }}
 
 jobs:
