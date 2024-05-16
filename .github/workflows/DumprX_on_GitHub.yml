@@ -9,9 +9,9 @@ on:
 
 env:
   ROM_LINK: ${{ github.event.inputs.ROM_LINK }}
-  GIT_ORG: Van-Firmware-Dumps
+  GIT_ORG: ${{ secrets.GIT_ORG }}
   TG_TOKEN: ${{ secrets.TG_TOKEN }}
-  CHAT_ID: "@VanFirmwareDumps"
+  CHAT_ID: ${{ secrets.CHAT_ID }}
   GIT_TOKEN: ${{ secrets.GIT_TOKEN }}
 
 jobs:
