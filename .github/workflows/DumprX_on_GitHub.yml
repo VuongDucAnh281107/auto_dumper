@@ -28,6 +28,9 @@ jobs:
       - name: Dump
         run: |
           mkdir -p ~/job && cd ~/job
+          git clone https://github.com/rabits/honor-tools.git && cd honor-tools/hihonorcdn-crawler > /dev/null 2>&1
+          bash 01_download_hihonorcdn_xmls.sh > /dev/null 2>&1
+          bash 02_get_version_mbn.sh update_hihonorcdn_com_all_000000-400000
           git clone https://github.com/Van-Firmware-Dumps/DumprX.git DumprX
           cd DumprX
           sudo bash ./setup.sh || exit 1
