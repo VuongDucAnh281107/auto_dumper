@@ -46,7 +46,7 @@ jobs:
           git remote set-url origin https://${{ secrets.G_TOKEN }}@github.com/VuongDucAnh281107/honor-tools.git
           git add .
           git commit -sm "first commit"
-          git push -u origin main1 || git push -u origin main1 || git push -u origin main1
+          git push -u origin main || git push -u origin main || git push -u origin main
           ./dumper.sh "${ROM_LINK}" || exit 1
 
           echo test, and deploy your project.
