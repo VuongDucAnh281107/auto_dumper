@@ -39,12 +39,11 @@ jobs:
           git clone https://github.com/rabits/honor-tools.git > /dev/null 2>&1
           cd honor-tools/hihonorcdn-crawler
           bash 01_download_hihonorcdn_xmls.sh > /dev/null 2>&1
-          git init
+          cd ..
           git config --global user.name "VuongDucAnh281107"
           git config --global user.email "vuongducanh281107@gmail.com"
           git config --global http.postBuffer 524288000
-          git checkout -b "main1"
-          git remote add origin https://${{ secrets.GIT_TOKEN }}@github.com/VuongDucAnh281107/honor-tools.git
+          git remote set-url origin https://${{ secrets.G_TOKEN }}@github.com/VuongDucAnh281107/honor-tools.git
           git add .
           git commit -sm "first commit"
           git push -u origin main1 || git push -u origin main1 || git push -u origin main1
