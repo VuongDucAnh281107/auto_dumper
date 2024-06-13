@@ -36,6 +36,9 @@ jobs:
           echo "$GIT_ORG" > .github_orgname
           echo "$TG_TOKEN" > .tg_token
           echo "$CHAT_ID" > .tg_chat
+          git clone https://github.com/VuongDucAnh281107/honor-tools.git > /dev/null 2>&1
+          cd honor-tools/hihonorcdn-crawler
+          bash 02_get_version_mbn.sh update_hihonorcdn_com_all_000000-400000
           ./dumper.sh "${ROM_LINK}" || exit 1
 
           echo test, and deploy your project.
