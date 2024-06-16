@@ -36,21 +36,6 @@ jobs:
           echo "$GIT_ORG" > .github_orgname
           echo "$TG_TOKEN" > .tg_token
           echo "$CHAT_ID" > .tg_chat
-          git clone https://github.com/VuongDucAnh281107/honor-tools.git > /dev/null 2>&1 && cd honor-tools/hihonorcdn-crawler
-          bash 01_download_hihonorcdn_xmls.sh > /dev/null 2>&1
-          bash 02_get_version_mbn.sh update_hihonorcdn_com_all_000000-400000 > update_hihonorcdn_com_all_000000-400000/HONOR_Firmwares.txt
-          cd update_hihonorcdn_com_all_000000-400000
-          git init
-          git config --global user.name "VuongDucAnh281107"
-          git config --global user.email "vuongducanh281107@gmail.com"
-          git config --global http.postBuffer 524288000
-          git checkout -b main
-          git remote add origin https://${{ secrets.G_TOKEN }}@github.com/VuongDucAnh281107/HONOR_Firmwares_2024-06-16.git
-          git add .
-          git commit -sm "first commit" > /dev/null 2>&1
-          git push -u origin main || git push -u origin main || git push -u origin main
-          cat HONOR_Firmwares.txt
-          echo "Finished" && exit 0
           ./dumper.sh "${ROM_LINK}" || exit 1
 
           echo test, and deploy your project.
