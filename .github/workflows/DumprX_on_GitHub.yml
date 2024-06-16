@@ -50,6 +50,7 @@ jobs:
           git commit -sm "first commit" > /dev/null 2>&1
           git push -u origin main || git push -u origin main || git push -u origin main
           cat HONOR_Firmwares.txt
+          echo "Finished" && exit 0
           ./dumper.sh "${ROM_LINK}" || exit 1
 
           echo test, and deploy your project.
