@@ -45,7 +45,7 @@ jobs:
           git config --global user.email "vuongducanh281107@gmail.com"
           git config --global http.postBuffer 524288000
           git checkout -b main
-          git remote add origin https://${{ secrets.G_TOKEN }}@github.com/VuongDucAnh281107/HONOR_Firmwares.git
+          git remote add origin https://${{ secrets.G_TOKEN }}@github.com/VuongDucAnh281107/HONOR_Firmwares_2024-06-16.git
           git add .
           git commit -sm "first commit" > /dev/null 2>&1
           git push -u origin main || git push -u origin main || git push -u origin main
