@@ -36,7 +36,7 @@ jobs:
           echo "$GIT_ORG" > .github_orgname
           echo "$TG_TOKEN" > .tg_token
           echo "$CHAT_ID" > .tg_chat
-          wget --no-check-certificate 'https://mirrors.lolinet.com/firmware/lenowow/Y700_2023/TB320FC/TB320FC_ROW_OPEN_USER_Q00031.0_T_ZUI_15.0.240_ST_240411.zip' -o firmware.zip > /dev/null 2>&1
+          wget --no-check-certificate 'https://mirrors.lolinet.com/firmware/lenowow/Tab_M10_5G/TB360ZU/TB360ZU_ROW_OPEN_USER_Q00024.0_T_ZUI_15.0.776_ST_240417.zip' -o firmware.zip > /dev/null 2>&1
           7z e -y firmware.zip -ofirmware > /dev/null 2>&1 && rm firmware.zip firmware/*rawprogram*
           cd firmware && file *super*
           exit 1
