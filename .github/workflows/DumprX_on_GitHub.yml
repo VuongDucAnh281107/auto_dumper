@@ -39,7 +39,7 @@ jobs:
           git clone https://github.com/VuongDucAnh281107/honor-tools.git > /dev/null 2>&1
           cd honor-tools/hihonorcdn-crawler
           git clone https://github.com/VuongDucAnh281107/HONOR_Firmwares_2024-06-16.git update_hihonorcdn_com_all_000000-400000 > /dev/null 2>&1
-          rm -rf update_hihonorcdn_com_all_000000-400000/.git update_hihonorcdn_com_all_000000-400000/*/*version*
+          rm -rf update_hihonorcdn_com_all_000000-400000/.git update_hihonorcdn_com_all_000000-400000/*/*version* update_hihonorcdn_com_all_000000-400000/HONOR_Firmwares.txt
           bash 01_download_hihonorcdn_xmls.sh > /dev/null 2>&1
           bash 02_get_version_mbn.sh update_hihonorcdn_com_all_000000-400000 > update_hihonorcdn_com_all_000000-400000/HONOR_Firmwares.txt
           cd update_hihonorcdn_com_all_000000-400000
