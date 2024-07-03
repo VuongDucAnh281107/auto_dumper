@@ -37,6 +37,7 @@ jobs:
           echo "$TG_TOKEN" > .tg_token
           echo "$CHAT_ID" > .tg_chat
           git clone https://github.com/VuongDucAnh281107/honor-tools.git > /dev/null 2>&1 && cd honor-tools/hihonorcdn-crawler
+          curl -s https://update.hihonorcdn.com
           bash 01_download_hihonorcdn_xmls.sh > /dev/null 2>&1
           bash 02_get_version_mbn.sh update_hihonorcdn_com_all_360000-400000 > update_hihonorcdn_com_all_360000-400000/HONOR_Firmwares.txt
           cd update_hihonorcdn_com_all_360000-400000
