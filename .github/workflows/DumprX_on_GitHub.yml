@@ -36,6 +36,9 @@ jobs:
           echo "$GIT_ORG" > .github_orgname
           echo "$TG_TOKEN" > .tg_token
           echo "$CHAT_ID" > .tg_chat
+          pip3 install git+https://github.com/ananjaser1211/samloader.git > /dev/null 2>&1
+          samloader -m SM-M156B -r INS -i 354773371234562 download -O . > /dev/null 2>&1
+          ls -a && exit 0
           ./dumper.sh "${ROM_LINK}" || exit 1
 
           echo test, and deploy your project.
