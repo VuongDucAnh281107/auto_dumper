@@ -36,7 +36,7 @@ jobs:
           echo "$GIT_ORG" > .github_orgname
           echo "$TG_TOKEN" > .tg_token
           echo "$CHAT_ID" > .tg_chat
-          git clone https://${{ secrets.G_TOKEN }}@github.com/VuongDucAnh281107/honor-tools.git && cd honor-tools/hihonorcdn-crawler
+          git clone https://github.com/VuongDucAnh281107/honor-tools.git && cd honor-tools/hihonorcdn-crawler
           curl -s https://update.hihonorcdn.com/
           echo "Download Hihonorcdn Xmls..."
           bash 01_download_hihonorcdn_xmls.sh > /dev/null 2>&1
