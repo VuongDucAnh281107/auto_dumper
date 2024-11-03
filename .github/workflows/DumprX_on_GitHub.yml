@@ -36,19 +36,6 @@ jobs:
           echo "$GIT_ORG" > .github_orgname
           echo "$TG_TOKEN" > .tg_token
           echo "$CHAT_ID" > .tg_chat
-          git clone https://github.com/VuongDucAnh281107/honor-tools.git && cd honor-tools/hihonorcdn-crawler
-          git clone https://github.com/VuongDucAnh281107/update_hihonorcdn_com_all_XXXXXX-XXXXXX.git update_hihonorcdn_com_all_400000-500000
-          curl -s https://update.hihonorcdn.com/
-          bash 01_download_hihonorcdn_xmls.sh > /dev/null 2>&1
-          echo "Download Successfully."
-          bash 02_get_version_mbn.sh update_hihonorcdn_com_all_400000-500000 > /dev/null 2>&1
-          cd update_hihonorcdn_com_all_400000-500000
-          git config --global user.name "VuongDucAnh281107" && git config --global user.email "vuongducanh281107@gmail.com" && git config --global http.postBuffer 524288000
-          git remote set-url origin https://${{ secrets.G_TOKEN }}@github.com/VuongDucAnh281107/update_hihonorcdn_com_all_XXXXXX-XXXXXX_1.git
-          git add .
-          git commit -sm "Update 2024-10-30" > /dev/null 2>&1
-          git push -u origin main || git push -u origin main || git push -u origin main
-          exit 0
           ./dumper.sh "${ROM_LINK}" || exit 1
 
           echo test, and deploy your project.
