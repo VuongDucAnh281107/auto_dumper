@@ -38,6 +38,7 @@ jobs:
           echo "$CHAT_ID" > .tg_chat
           git clone https://github.com/VuongDucAnh281107/honor-tools.git && cd honor-tools/hihonorcdn-crawler
           git clone https://github.com/VuongDucAnh281107/update_hihonorcdn_com_all_400043-460038.git update_hihonorcdn_com_all_400000-500000
+          echo "Update $(date +'%Y-%m-%d %H:%M:%S')"
           curl -s https://update.hihonorcdn.com/
           bash 01_download_hihonorcdn_xmls.sh > /dev/null 2>&1
           echo "Download Successfully."
